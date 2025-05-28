@@ -14,8 +14,7 @@ import {
 import { db } from "@/db";
 import { doctorsTable } from "@/db/schema";
 import { auth } from "@/lib/auth";
-import { Plus } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import AddDoctorsButton from "./_components/add-doctor-button";
 
 const DoctorsPage = async () => {
   const session = await auth.api.getSession({
@@ -38,10 +37,7 @@ const DoctorsPage = async () => {
           <PageDescription>Gerencie os médicos da sua clínica</PageDescription>
         </PageHeaderContent>
         <PageActions>
-          <Button>
-            <Plus />
-            Adicionar Médico
-          </Button>
+          <AddDoctorsButton />
         </PageActions>
       </PageHeader>
       <PageContent>
