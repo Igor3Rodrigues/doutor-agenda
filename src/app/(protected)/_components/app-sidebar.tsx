@@ -100,7 +100,7 @@ export function AppSidebar() {
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton size="lg">
                   <Avatar>
-                    <AvatarFallback>F</AvatarFallback>
+                    <AvatarFallback>I</AvatarFallback>
                   </Avatar>
                   <div>
                     <p className="text-sm">
