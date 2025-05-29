@@ -1,11 +1,11 @@
-import { redirect } from "next/navigation";
 import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { auth } from "@/lib/auth";
 
-import LoginForm from "./components/login-up-forms";
-import SignUpForm from "./components/sign-up-forms";
+import LoginForm from "./components/login-form";
+import SignUpForm from "./components/sign-up-form";
 
 const AuthenticationPage = async () => {
   const session = await auth.api.getSession({
@@ -19,7 +19,7 @@ const AuthenticationPage = async () => {
       <Tabs defaultValue="login" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="login">Login</TabsTrigger>
-          <TabsTrigger value="register">Criar Conta</TabsTrigger>
+          <TabsTrigger value="register">Criar conta</TabsTrigger>
         </TabsList>
         <TabsContent value="login">
           <LoginForm />
